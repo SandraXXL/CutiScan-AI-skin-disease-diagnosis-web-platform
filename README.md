@@ -8,7 +8,7 @@ https://youtu.be/kVCwetoE7ek
 
 "Cuti" in "CutiScan" originates from the latin word "cutis" which stands for "skin".
 
-This project ultilizes InceptionV3 model trained on a dataset that conbines resources from "DermNet" and https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset. CONTACT ME FOR THE DATASET.
+This project ultilizes InceptionV3 model trained on a dataset that conbines resources from "DermNet" and https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset. !!!CONTACT ME FOR THE DATASET USED IN THIS PROJECT!!!.
 
 ### Accuracy (Training): 93%
 
