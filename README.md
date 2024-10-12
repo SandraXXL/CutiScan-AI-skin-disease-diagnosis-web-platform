@@ -13,17 +13,29 @@ Accuracy (Validation): 92%
 The dataset consists of 12 classes and 10000+ images in total, each class contains approximately 850 images. Dataset splits into 80% for training and 20% for testing.
 
 Skin diseases included are:
+
 acne
+
 alopecia
+
 athlete_foot
+
 cellulitis
+
 chickenpox
+
 cutaneous_larva_migrans
+
 impetigo
+
 nail_fungus
+
 ringworm
+
 shingles
+
 urticaria
+
 vitiligo
 
 <img width="1435" alt="Screen Shot 2024-10-11 at 5 46 58 PM" src="https://github.com/user-attachments/assets/b9694bd2-1276-4ac9-be93-b735030de02b">
@@ -49,21 +61,28 @@ Figure 2: example of table contents
 
 # Folder Structure
 templates: all web files are under this folder
+
 static & example: images for displaying on web pages
+
 uploads: your uploaded skin images will be stored in here
+
 app.py: main backend component
 
 
 
 # How do you run this project (without hosting)
 Prerequisites:
+
 make sure you start your "MySQL Database", "ProFTPD", "Apache Web Server" with Xammp.
 
 Step 1: 
+
 in cmd/terminal, go to "CutiScan" directory.
 
 Step 2:
+
 run command: app.py
+
 use the generated link to access to access CutiScan web platform.
 
 
