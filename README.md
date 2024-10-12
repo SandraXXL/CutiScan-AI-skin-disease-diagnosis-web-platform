@@ -38,13 +38,13 @@ urticaria
 
 vitiligo
 
-<img width="1435" alt="Screen Shot 2024-10-11 at 5 46 58 PM" src="https://github.com/user-attachments/assets/b9694bd2-1276-4ac9-be93-b735030de02b">
+<img width="1099" alt="index" src="https://github.com/user-attachments/assets/4cbff99c-d1a9-49e6-a381-063a94b20f3e">
 
-<img width="1439" alt="Screen Shot 2024-10-11 at 5 47 15 PM" src="https://github.com/user-attachments/assets/63938378-9071-4f23-a8c8-50fb62c13593">
+<img width="1098" alt="upload" src="https://github.com/user-attachments/assets/3c35dd49-ca94-49c9-8aeb-e1131eea2afb">
 
-<img width="659" alt="Screen Shot 2024-10-12 at 10 17 17 AM" src="https://github.com/user-attachments/assets/11d57e72-80d3-446e-a18c-f136636fa636">
+<img width="1098" alt="result" src="https://github.com/user-attachments/assets/bee5d278-a0e2-4278-a40a-32766f35ca80">
 
-<img width="1365" alt="Screen Shot 2024-10-12 at 10 17 54 AM" src="https://github.com/user-attachments/assets/afbdfeef-0fc3-410f-a895-0bebeebe9ad7">
+
 
 # *** Notes ***
 !!!!!Note that is repository does not contain "my_model.keras" since it exceeds the maximum uploading limit, you are supposed to run the model again and then save it yourself!!!!!
