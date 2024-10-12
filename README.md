@@ -1,5 +1,9 @@
 # CutiScan-AI-skin-disease-diagnosis-web-platform
 
+## Video Demo:
+
+https://youtu.be/kVCwetoE7ek
+
 ## Introduction:
 
 "Cuti" in "CutiScan" originates from the latin word "cutis" which stands for "skin".
