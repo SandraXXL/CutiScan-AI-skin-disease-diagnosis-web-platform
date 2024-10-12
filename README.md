@@ -7,6 +7,7 @@ Introduction:
 This project ultilizes InceptionV3 model trained on a dataset that conbines resources from DermNet and https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset.
 
 Accuracy (Training): 93%
+
 Accuracy (Validation): 92%
 
 The dataset consists of 12 classes and 10000+ images in total, each class contains approximately 850 images. Dataset splits into 80% for training and 20% for testing.
