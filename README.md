@@ -81,7 +81,7 @@ make sure you start your "MySQL Database", "ProFTPD", "Apache Web Server" with X
 
 Step 1: 
 
-in cmd/terminal, go to "CutiScan" directory.
+in cmd/terminal, make sure you locate inside the "CutiScan" directory.
 
 Step 2:
 
