@@ -1,18 +1,18 @@
 # CutiScan-AI-skin-disease-diagnosis-web-platform
 
-# Introduction:
+## Introduction:
 
 "Cuti" in "CutiScan" originates from the latin word "cutis" which stands for "skin".
 
 This project ultilizes InceptionV3 model trained on a dataset that conbines resources from "DermNet" and https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset.
 
-Accuracy (Training): 93%
+### Accuracy (Training): 93%
 
-Accuracy (Validation): 92%
+### Accuracy (Validation): 92%
 
 The dataset consists of 12 classes and 8000+ images in total. Dataset splits into 80% for training and 20% for testing.
 
-Skin diseases included are:
+### Skin diseases included are:
 
 acne
 
@@ -46,9 +46,8 @@ vitiligo
 
 
 
-# *** Notes ***
-!!!!!Note that is repository does not contain "my_model.keras" since it exceeds the maximum uploading limit, you are supposed to run the model again and then save it yourself!!!!!
-Also this project requires you to create a database "cutiscan" to store informations regarding each diseases. You can create such a dataset with "PHPMyAdmin", only one table with the name "disease" is needed in this project, here is the database structure:
+## *** Notes ***
+### !!!!!Note that is repository does not contain "my_model.keras" since it exceeds the maximum uploading limit, you are supposed to run the model again and then save it yourself!!!!! Also this project requires you to create a database "cutiscan" to store informations regarding each diseases. You can create such a dataset with "PHPMyAdmin", only one table with the name "disease" is needed in this project, here is the database structure:
 
 
 Figure 1: table structure
@@ -63,7 +62,8 @@ Figure 2: example of table contents
 
 
 
-# Folder Structure
+## Folder Structure
+
 templates: all web files are under this folder
 
 static & example: images for displaying on web pages
@@ -74,16 +74,16 @@ app.py: main backend component
 
 
 
-# How do you run this project (without hosting)
-Prerequisites:
+## How do you run this project (without hosting)
+### Prerequisites:
 
 make sure you start your "MySQL Database", "ProFTPD", "Apache Web Server" with Xammp.
 
-Step 1: 
+### Step 1: 
 
 in cmd/terminal, make sure you locate inside the "CutiScan" directory.
 
-Step 2:
+### Step 2:
 
 run command: app.py
 
