@@ -10,7 +10,7 @@ Accuracy (Training): 93%
 
 Accuracy (Validation): 92%
 
-The dataset consists of 12 classes and 10000+ images in total, each class contains approximately 850 images. Dataset splits into 80% for training and 20% for testing.
+The dataset consists of 12 classes and 8000+ images in total. Dataset splits into 80% for training and 20% for testing.
 
 Skin diseases included are:
 
