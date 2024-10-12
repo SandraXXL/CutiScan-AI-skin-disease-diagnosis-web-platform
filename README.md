@@ -47,7 +47,7 @@ vitiligo
 
 
 ## *** Notes ***
-### !!!!!Note that is repository does not contain "my_model.keras" since it exceeds the maximum uploading limit, you are supposed to run the model again and then save it to ".h5" or ".keras" yourself!!!!! Also this project requires you to create a database "cutiscan" to store informations regarding each diseases. You can create such a dataset with "PHPMyAdmin", only one table with the name "disease" is needed in this project, here is the database structure:
+### !!!!!Note that is repository does not contain "my_model.keras" since it exceeds the maximum uploading limit, you are supposed to run the model again and then save it to ".h5" or ".keras" yourself!!!!! Also this project requires you to create a database "cutiscan" to store information regarding each disease. You can create such a dataset with "PHPMyAdmin", only one table with the name "disease" is needed in this project, here is the database structure:
 
 
 Figure 1: table structure
