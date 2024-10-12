@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Acne</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Acne.</p>
+
+            <p class="content-txt">rarity: <strong>common</strong> &ensp; prevalence: <strong>9.4%</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Acne is a skin condition that occurs when your hair follicles become plugged with oil and dead skin cells. It causes whiteheads, blackheads or pimples. Acne is most common among teenagers, though it affects people of all ages.<br><br>
+
+                Effective acne treatments are available, but acne can be persistent. The pimples and bumps heal slowly, and when one begins to go away, others seem to crop up.<br><br>
+
+                Depending on its severity, acne can cause emotional distress and scar the skin. The earlier you start treatment, the lower your risk of such problems.
+            </p>
+            <br>
+
+            <p class="subtitle">Symptoms.</p>
+            <p class="content-txt">Acne signs vary depending on the severity of your condition:</p>
+            <br>
+            <ul class="content-txt">
+                <li>Whiteheads (closed plugged pores)</li>
+                <li>Blackheads (open plugged pores)</li>
+                <li>Small red, tender bumps (papules)</li>
+                <li>Pimples (pustules), which are papules with pus at their tips</li>
+                <li>Large, solid, painful lumps under the skin (nodules)</li>
+                <li>Painful, pus-filled lumps under the skin (cystic lesions)</li>
+            </ul>
+
+            <p class="subtitle">Treatment Recommendations.</p>
+            <p class="content-txt">Recommendations are made in favor of several topical therapies, including:</p>
+            <br>
+            <ul class="content-txt">
+                <li>Benzoyl peroxide</li>
+                <li>Topical retinoids</li>
+                <li>Topical antibiotics</li>
+                <li>Clascoterone</li>
+                <li>Salicylic acid</li>
+                <li>Azelaic acid</li>
+            </ul>
+            <br>
+            <p class="content-txt">Recommendations are made in favor of several systemic therapies, including:</p>
+            <br>
+            <ul class="content-txt">
+                <li>Doxycycline</li>
+                <li>Minocycline</li>
+                <li>Sarecycline</li>
+                <li>Combined oral contraceptives</li>
+                <li>Spironolactone</li>
+                <li>Isotretinoin</li>
+            </ul>
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='acne1.jpg') }}" alt="acne">
+            
+            <img src="{{ url_for('static', filename='acne2.jpg') }}" alt="acne">  
+
+            <img src="{{ url_for('static', filename='acne3.jpg') }}" alt="acne">
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>

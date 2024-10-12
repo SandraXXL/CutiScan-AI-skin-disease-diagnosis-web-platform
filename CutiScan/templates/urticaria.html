@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Urticaria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Urticaria.</p>
+
+            <p class="content-txt">rarity: <strong>common</strong> &ensp; prevalence: <strong>20%</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Hives — also called urticaria (ur-tih-KAR-e-uh) — is a skin reaction that causes itchy welts. Chronic hives are welts that last for more than six weeks and return often over months or years. Often, the cause of chronic hives isn't clear.
+                <br><br>
+
+                The welts often start as itchy patches that turn into swollen welts that vary in size. These welts appear and fade at random as the reaction runs its course.
+                <br><br>
+
+                Chronic hives can be very uncomfortable and interfere with sleep and daily activities. For many people, anti-itch medications (antihistamines) provide relief.
+            </p>
+            <br>
+
+            <p class="subtitle">Symptoms.</p>
+            <p class="content-txt">
+            Symptoms of chronic hives include:
+            </p>
+            <br>
+
+            <ul class="content-txt">
+                <li>Batches of welts (wheals) that can arise anywhere on the body</li>
+                <li>Welts that might be red, purple or skin-colored, depending on your skin color</li>
+                <li>Welts that vary in size, change shape, and appear and fade repeatedly</li>
+                <li>Itchiness (pruritus), which can be intense</li>
+                <li>Painful swelling (angioedema) around the eyes, cheeks or lips</li>
+                <li>Flares triggered by heat, exercise or stress</li>
+                <li>Symptoms that persist for more than six weeks and recur often and anytime, sometimes for months or years</li>
+            </ul>
+
+            <p class="subtitle">Prevention.</p>
+            <p class="content-txt">
+            To lower your likelihood of experiencing hives or angioedema, take the following precautions:
+            </p>
+            <br>
+
+            <ul class="content-txt">
+                <li><strong>Avoid known triggers.</strong> If you know what has triggered your hives, try to avoid that substance.</li>
+
+                <li><strong>Bathe and change your clothes.</strong> If pollen or animal contact has triggered your hives in the past, take a bath or shower and change your clothes if you're exposed to pollen or animals.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='urticaria1.jpg') }}" >
+            
+            <img src="{{ url_for('static', filename='urticaria2.jpg') }}" >  
+
+            <img src="{{ url_for('static', filename='urticaria3.jpg') }}" >
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>

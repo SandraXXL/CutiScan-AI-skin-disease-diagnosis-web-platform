@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cutiscan: Upload Image</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Optima, sans-serif;
+            background-color: #ffe2e6;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            padding-top: 70px;
+        }
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+        footer{
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+        h1:hover span {
+            display: none;
+        }
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+        .container {
+            max-width: 900px;
+            height: 620px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: none;
+            opacity: 0;
+            animation: fadeOut 0.5s ease-in-out;
+        }
+        .container.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s ease-in-out, slideIn 0.5s ease-in-out;
+        }
+        .switch-text {
+            color: pink;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .switch-text:hover {
+            color: grey;
+        }
+        .upload_jpg {
+            width: 20%;
+        }
+
+        .submit-btn {
+            padding: 10px 35px;
+            border-radius: 50px;
+            border: 4px;
+            border-style: solid;
+            border-color: white;
+            font-family: Optima, sans-serif;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transition: 0.5s all;
+        }
+
+        .submit-btn:hover {
+            border-color: #EBEBEB;
+        }
+
+
+        /* Keyframes for fade in and out animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        /* Keyframes for slide in animation */
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        input[type="file"]::file-selector-button{
+            padding: 10px 35px;
+            border-radius: 50px;
+            border: 4px;
+            border-style: solid;
+            border-color: white;
+            background-color: #EBEBEB;
+            font-family: Optima, sans-serif;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.5s all;
+        }
+
+        input[type="file"]:hover::file-selector-button{
+            border-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+
+
+    <div class="container-wrapper">
+
+        <div id="uploadDirectContainer" class="container active">
+
+           
+
+
+            <!--<h3>Upload your skin image directly.</h3> -->
+            <br>
+            <img src="{{ url_for('static', filename='upload.png') }}" alt="Upload" style="width: 100%; height: auto; opacity: 100%; display: block; margin-left: auto; margin-right: auto;">
+            <br>
+            <center>
+                <form action="/classify" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <button type="submit" class="submit-btn">Upload & Classify</button>
+            </form>
+            </center>
+            <br>
+            <p class="switch-text" onclick="switchContainer('crop')">>>>Click here to crop.</p>
+        </div>
+
+        <div id="cropUploadContainer" class="container">
+            <!-- <h3>Cropping before uploading your image.</h3> -->
+            <br>
+            <img src="{{ url_for('static', filename='crop.png') }}" alt="Upload" style="width: 100%; height: auto; opacity: 100%;display: block; margin-left: auto; margin-right: auto;">
+            <br>
+            <center>
+            <form action="/crop" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <button type="submit" class="submit-btn">Upload & Crop</button>
+            </form>
+            </center>
+            <br>
+            <p class="switch-text" onclick="switchContainer('direct')">>>>Go back to direct upload.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+
+    <script>
+        function switchContainer(option) {
+            const uploadDirectContainer = document.getElementById('uploadDirectContainer');
+            const cropUploadContainer = document.getElementById('cropUploadContainer');
+
+            if (option === 'crop') {
+                uploadDirectContainer.classList.remove('active');
+                cropUploadContainer.classList.add('active');
+            } else {
+                cropUploadContainer.classList.remove('active');
+                uploadDirectContainer.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

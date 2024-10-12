@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Impetigo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Impetigo.</p>
+
+            <p class="content-txt">rarity: <strong>common</strong> &ensp; prevalence: <strong>2.8%</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Impetigo (im-puh-TIE-go) is a common and highly contagious skin infection that mainly affects infants and young children. It usually appears as reddish sores on the face, especially around the nose and mouth and on the hands and feet. Over about a week, the sores burst and develop honey-colored crusts.
+                <br><br>
+
+                Treatment with antibiotics can limit the spread of impetigo to others. Keep children home from school or day care until they're no longer contagious — usually 24 hours after beginning antibiotic treatment.
+            </p>
+            <br>
+
+            <p class="subtitle">Symptoms.</p>
+            <p class="content-txt">
+                The main symptom of impetigo is reddish sores, often around the nose and mouth. The sores quickly rupture, ooze for a few days and then form a honey-colored crust. Sores can spread to other areas of the body through touch, clothing and towels. Itching and soreness are generally mild.
+                <br><br>
+                
+                A less common form of the condition called bullous impetigo causes larger blisters on the trunk of infants and young children. Ecthyma is a serious form of impetigo that causes painful fluid- or pus-filled sores.
+                <br><br>
+                <strong>Bullous impetigo</strong>
+                <br>
+                Bullous impetigo causes fluid-filled blisters often on the trunk, arms and legs of infants and children younger than 2 years.
+                <br><br>
+                <strong>Ecthyma</strong>
+                <br>
+                A more serious form of impetigo, called ecthyma, penetrates deeper into the skin causing painful fluid- or pus-filled sores that turn into deep ulcers.
+
+            </p>
+            <br>
+            
+
+            <p class="subtitle">Prevention.</p>
+            <p class="content-txt">
+                Keeping skin clean is the best way to keep it healthy. It's important to wash cuts, scrapes, insect bites and other wounds right away.
+                <br><br>
+                
+                To help prevent impetigo from spreading to others:
+            </p>
+            <br>
+            <ul class="content-txt">
+                <li>Gently wash the affected areas with mild soap and running water and then cover lightly with gauze.</li>
+                <li>Wash an infected person's clothes, linens and towels every day with hot water and don't share them with anyone else in your family.</li>
+                <li>Wear gloves when applying antibiotic ointment and wash your hands thoroughly afterward.</li>
+                <li>Cut an infected child's nails short to prevent damage from scratching.</li>
+                <li></li>
+                <li>Encourage regular and thorough handwashing and good hygiene in general.</li>
+                <li>Keep your child with impetigo home until your doctor says they aren't contagious.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='impetigo1.jpg') }}" >
+            
+            <img src="{{ url_for('static', filename='impetigo2.jpg') }}" >  
+
+            <img src="{{ url_for('static', filename='impetigo3.jpg') }}" >
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>

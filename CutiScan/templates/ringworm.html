@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Ringworm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Ringworm.</p>
+
+            <p class="content-txt">rarity: <strong>common</strong> &ensp; prevalence: <strong>20%</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Ringworm of the body (tinea corporis) is a rash caused by a fungal infection. It's usually an itchy, circular rash with clearer skin in the middle. Ringworm gets its name because of its appearance. No worm is involved.
+                <br><br>
+
+                Ringworm of the body is related to athlete's foot (tinea pedis), jock itch (tinea cruris) and ringworm of the scalp (tinea capitis). Ringworm often spreads by direct skin-to-skin contact with an infected person or animal.
+                <br><br>
+
+                Mild ringworm often responds to antifungal medications applied to the skin. For more-severe infections, you may need to take antifungal pills for several weeks.
+            </p>
+            <br>
+
+            <p class="subtitle">Symptoms.</p>
+            <p class="content-txt">
+            Signs and symptoms of ringworm may include:
+            </p>
+            <br>
+
+            <ul class="content-txt">
+                <li>A scaly ring-shaped area, typically on the buttocks, trunk, arms and legs</li>
+                <li>Itchiness</li>
+                <li>A clear or scaly area inside the ring, perhaps with a scattering of bumps whose color ranges from red on white skin to reddish, purplish, brown or gray on black and brown skin</li>
+                <li>Slightly raised, expanding rings</li>
+                <li>A round, flat patch of itchy skin</li>
+                <li>Overlapping rings</li>
+            </ul>
+
+            <p class="subtitle">Prevention.</p>
+            <p class="content-txt">
+            Ringworm is difficult to prevent. The fungus that causes it is common, and the condition is contagious even before symptoms appear. Take these steps to reduce your risk of ringworm:
+            </p>
+            <br>
+
+            <ul class="content-txt">
+                <li><strong>Educate yourself and others.</strong> Be aware of the risk of ringworm from infected people or pets. Tell your children about ringworm, what to watch for and how to avoid infection.</li>
+
+                <li><strong>Keep clean.</strong> Wash your hands often. Keep shared areas clean, especially in schools, child care centers, gyms and locker rooms. If you participate in contact sports, shower right after practice or a match and keep your uniform and gear clean.</li>
+
+                <li><strong>Stay cool and dry.</strong> Don't wear thick clothing for long periods of time in warm, humid weather. Avoid excessive sweating.</li>
+
+                <li><strong>Avoid infected animals.</strong> The infection often looks like a patch of skin where fur is missing. If you have pets or other animals, ask your veterinarian to check them for ringworm.</li>
+
+                <li><strong>Don't share personal items. </strong> Don't let others use your clothing, towels, hairbrushes, sports gear or other personal items. And don't borrow such things.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='ringworm1.jpg') }}" >
+            
+            <img src="{{ url_for('static', filename='ringworm2.jpg') }}" >  
+
+            <img src="{{ url_for('static', filename='ringworm3.jpg') }}" >
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>

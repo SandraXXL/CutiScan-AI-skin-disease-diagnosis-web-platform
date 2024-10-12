@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Chickenpox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Chickenpox.</p>
+
+            <p class="content-txt">rarity: <strong>Very Common</strong> &ensp; prevalence: <strong>95% (USA)</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Chickenpox is an illness caused by the varicella-zoster virus. It brings on an itchy rash with small, fluid-filled blisters.
+                <br><br>
+
+                Chickenpox spreads very easily to people who haven't had the disease or haven't gotten the chickenpox vaccine.
+                <br><br>
+
+                Chickenpox used to be a widespread problem, but today the vaccine protects children from it.
+                <br><br>
+
+                The chickenpox vaccine is a safe way to prevent this illness and the other health problems that can happen during it.
+
+            </p>
+            <br>
+
+            <p class="subtitle">Symptoms.</p>
+            <p class="content-txt">
+                The rash caused by chickenpox appears 10 to 21 days after you're exposed to the varicella-zoster virus. The rash often lasts about 5 to 10 days. Other symptoms that may appear 1 to 2 days before the rash include:
+            </p>
+            <br>
+            <ul class="content-txt">
+                <li>Fever</li>
+                <li>Loss of appetite</li>
+                <li>Headache</li>
+                <li>Tiredness and a general feeling of being unwell</li>
+            </ul>
+            <br>
+            <p class="content-txt">
+                Once the chickenpox rash appears, it goes through three phases:
+            </p>
+            <br>
+            <ul class="content-txt">
+                <li>Raised bumps called papules, which break out over a few days.</li>
+                <li>Small fluid-filled blisters called vesicles, which form in about one day and then break and leak.</li>
+                <li>Crusts and scabs, which cover the broken blisters and take a few more days to heal.</li>
+            </ul>
+            <br>
+            <p class="content-txt">
+                New bumps keep showing up for several days. So you may have bumps, blisters and scabs at the same time. You can spread the virus to other people for up to 48 hours before the rash appears. And the virus stays contagious until all broken blisters have crusted over.
+            </p>
+            <br>
+            <p class="content-txt">
+                The disease is by and large mild in healthy children. But sometimes, the rash can cover the whole body. Blisters may form in the throat and eyes. They also may form in tissue that lines the inside of the urethra, anus and vagina.
+            </p>
+            <br>
+
+            <p class="subtitle">Prevention.</p>
+            <p class="content-txt">
+                The chickenpox vaccine, also called the varicella vaccine, is the best way to prevent chickenpox. In the United States, experts from the CDC report that two doses of the vaccine prevent illness over 90% of the time. Even if you get chickenpox after receiving the vaccine, your symptoms may be much milder.
+                <br><br>
+                In the United States, two chickenpox vaccines are licensed for use: Varivax contains only the chickenpox vaccine. It can be used in the United States to vaccinate people age 1 or older. ProQuad combines the chickenpox vaccine with the measles, mumps and rubella vaccine. It can be used in the United States for children ages 1 to 12. This is also called the MMRV vaccine.
+                <br><br>
+
+                In the United States, children receive two doses of the varicella vaccine: the first between ages 12 and 15 months and the second between ages 4 and 6 years. This is part of the routine vaccination schedule for children.
+                <br><br>
+
+                For some children between the ages of 12 and 23 months, the MMRV combination vaccine may raise the risk of fever and seizure from the vaccine. Ask your child's health care provider about the pros and cons of using the combined vaccines.
+                <br><br>
+
+                Children 7 to 12 years old who haven't been vaccinated should receive two doses of the varicella vaccine. The doses should be given at least three months apart.
+                <br><br>
+
+                People age 13 or older who haven't been vaccinated should receive two catch-up doses of the vaccine at least four weeks apart. It's even more important to get the vaccine if you have a higher risk of getting exposed to chickenpox. This includes health care workers, teachers, child-care employees, international travelers, military personnel, adults who live with young children and all nonpregnant women of childbearing age.
+                <br><br>
+
+                If you don't remember whether you've had chickenpox or the vaccine, your provider can give you a blood test to find out.
+                <br><br>
+
+                Other chickenpox vaccines are offered outside the United States. Talk to your health care provider for more information on how well they prevent chickenpox.
+                <br><br>
+
+                Do not get the chickenpox vaccine if you're pregnant. If you decide to get vaccinated before pregnancy, don't try to get pregnant during the series of shots or for one month after the last dose of the vaccine.
+            </p>
+
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='chickenpox1.jpg') }}" >
+            
+            <img src="{{ url_for('static', filename='chickenpox2.jpg') }}" >  
+
+            <img src="{{ url_for('static', filename='chickenpox3.jpg') }}" >
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>

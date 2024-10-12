@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Vitiligo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Vitiligo.</p>
+
+            <p class="content-txt">rarity: <strong>Slightly Common</strong> &ensp; prevalence: <strong>1%</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Vitiligo (vit-ih-LIE-go) is a disease that causes loss of skin color in patches. The discolored areas usually get bigger with time. The condition can affect the skin on any part of the body. It can also affect hair and the inside of the mouth.
+                <br><br>
+
+                Normally, the color of hair and skin is determined by melanin. Vitiligo occurs when cells that produce melanin die or stop functioning. Vitiligo affects people of all skin types, but it may be more noticeable in people with brown or Black skin. The condition is not life-threatening or contagious. It can be stressful or make you feel bad about yourself.
+                <br><br>
+
+                Treatment for vitiligo may restore color to the affected skin. But it doesn't prevent continued loss of skin color or a recurrence.
+            </p>
+            <br>
+
+            <p class="subtitle">Symptoms.</p>
+            <p class="content-txt">
+            Vitiligo signs include:
+            </p>
+            <br>
+
+            <ul class="content-txt">
+                <li>Patchy loss of skin color, which usually first appears on the hands, face, and areas around body openings and the genitals</li>
+                <li>Premature whitening or graying of the hair on your scalp, eyelashes, eyebrows or beard</li>
+                <li>Loss of color in the tissues that line the inside of the mouth and nose (mucous membranes)</li>
+            </ul>
+
+            <br>
+            <p class="subtitle">Treatment Suggestion.</p>
+            <p class="content-txt">
+            Treatments can include:
+            </p>
+            <br>
+
+            <ul class="content-txt">
+                <li>Medicines or medicated skin creams, such as corticosteroids or a calcineurin inhibitor, which may be able to return color to the white patches of skin.</li>
+
+                <li>Use of light (phototherapy) to help return color to the skin. There are several different forms of light therapy. Doctors may use light boxes to treat large areas of vitiligo and use laser treatments on more localized areas.</li>
+
+                <li>Depigmentation, or removing color from dark areas of the skin so they match the white patches. Doctors usually recommend this treatment for people who have vitiligo on more than half of their bodies. Depigmentation tends to be permanent and can take more than a year to complete. As with other treatments, it is very important to limit exposure to sunlight during and after treatment.  </li>
+
+                <li>Dermatologists may consider surgical techniques for long-standing segmental vitiligo or vitiligo of any type for which other treatments do not work. Surgery is typically not recommended when vitiligo is spreading or for people who scar easily or develop keloids, which are raised scars that grow larger than the wound that caused the scar.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='vitiligo1.jpg') }}" >
+            
+            <img src="{{ url_for('static', filename='vitiligo2.jpg') }}" >  
+
+            <img src="{{ url_for('static', filename='vitiligo3.jpg') }}" >
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Optima, sans-serif;
+            background-color: #ffe2e6;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            padding-top: 70px;
+        }
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+        footer{
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+        h1:hover span {
+            display: none;
+        }
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .crop-container {
+            max-width: 100%;
+            max-height: 70vh;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .crop-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+
+
+        button {
+            padding: 10px 20px;
+            background-color: pink;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: red;
+        }
+        form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="#">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <br>
+    <h2>Crop Image.</h2>
+    <br>
+    <div class="crop-container">
+        <img id="image" src="data:image/jpeg;base64,{{ img_data }}" alt="Crop Image">
+    </div>
+    <div class="button-container">
+        <button id="cropButton">Crop & Classify</button>
+    </div>
+
+    <form id="cropForm" action="/classify_cropped" method="post">
+        <input type="hidden" id="croppedImage" name="croppedImage">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var image = document.getElementById('image');
+            var cropper = new Cropper(image, {
+                aspectRatio: 1 / 1,
+                viewMode: 2,
+                autoCropArea: 1,
+                responsive: true,
+                background: false,
+            });
+
+            var cropButton = document.getElementById('cropButton');
+            cropButton.addEventListener('click', function () {
+                var croppedCanvas = cropper.getCroppedCanvas({
+                    width: 299,
+                    height: 299,
+                });
+                var croppedImage = croppedCanvas.toDataURL('image/jpeg');
+                document.getElementById('croppedImage').value = croppedImage;
+                document.getElementById('cropForm').submit();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Cellulitis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Cellulitis.</p>
+
+            <p class="content-txt">rarity: <strong>common</strong> &ensp; prevalence: <strong>2.5%</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Cellulitis (sel-u-LIE-tis) is a common, potentially serious bacterial skin infection. The affected skin is swollen and inflamed and is typically painful and warm to the touch.
+                <br><br>
+
+                Cellulitis usually affects the lower legs, but it can occur on the face, arms and other areas. The infection happens when a break in the skin allows bacteria to enter.
+                <br><br>
+
+                Left untreated, the infection can spread to the lymph nodes and bloodstream and rapidly become life-threatening. It isn't usually spread from person to person.
+            </p>
+            <br>
+
+            <p class="subtitle">Symptoms.</p>
+            <p class="content-txt">
+                Cellulitis usually occurs on one side of the body. Its signs and symptoms may include:
+            </p>
+            <br>
+            <ul class="content-txt">
+                <li>An irritated area of skin that tends to expand</li>
+                <li>Swelling</li>
+                <li>Tenderness</li>
+                <li>Pain</li>
+                <li>Warmth</li>
+                <li>Fever</li>
+                <li>Chills</li>
+                <li>Spots</li>
+                <li>Blisters</li>
+                <li>Skin dimpling</li>
+            </ul>
+
+            <p class="subtitle">Prevention.</p>
+            <p class="content-txt">
+                If your cellulitis recurs, your health care provider may recommend preventive antibiotics. To help prevent cellulitis and other infections, take these precautions when you have a skin wound:
+            </p>
+            <br>
+            <ul class="content-txt">
+                <li><strong>Wash the wound daily with soap and water.</strong> Do this gently as part of your normal bathing.</li>
+
+                <li><strong>Ask your health care provider whether it would help to apply a protective cream or ointment.</strong> For most surface wounds, a nonprescription ointment (Vaseline, Polysporin, others) provides adequate protection.</li>
+
+                <li><strong>Cover the wound with a bandage.</strong> Change bandages at least daily.</li>
+
+                <li><strong>Watch for signs of infection.</strong> Irritation, pain and pus all signal possible infection and the need for medical care.</li>
+            </ul>
+            <br>
+
+            <p class="content-txt">
+                People with diabetes or poor circulation need to take extra precautions to prevent skin injury. Good skin care includes the following:
+            </p>
+            <br>
+            <ul class="content-txt">
+                <li><strong>Inspecting your feet daily.</strong> Regularly check your feet for signs of injury so that you can catch infections early.</li>
+
+                <li><strong>Moisturizing your skin regularly.</strong> Lubricating the skin helps prevent cracking and peeling. Don't apply moisturizer to open sores.</li>
+
+                <li><strong>Trimming your fingernails and toenails carefully.</strong> Take care not to injure the surrounding skin.</li>
+
+                <li><strong>Protecting your hands and feet.</strong> Wear footwear and gloves suitable to your activities.</li>
+
+                <li><strong>Promptly treating infections on the skin's surface, such as athlete's foot.</strong> Minor skin infections can easily spread from person to person. Treat fungal infections as soon as they occur.</li>
+            </ul>
+
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='cellulitis1.jpg') }}" >
+            
+            <img src="{{ url_for('static', filename='cellulitis2.jpg') }}" >  
+
+            <img src="{{ url_for('static', filename='cellulitis3.jpg') }}" >
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>

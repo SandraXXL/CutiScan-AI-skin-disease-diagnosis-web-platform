@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Alopecia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Alopecia.</p>
+
+            <p class="content-txt">rarity: <strong>common</strong> &ensp; prevalence: <strong>2%</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Hair loss (alopecia) can affect just your scalp or your entire body, and it can be temporary or permanent. It can be the result of heredity, hormonal changes, medical conditions or a normal part of aging. Anyone can lose hair on their head, but it's more common in men.<br><br>
+
+                Baldness typically refers to excessive hair loss from your scalp. Hereditary hair loss with age is the most common cause of baldness. Some people prefer to let their hair loss run its course untreated and unhidden. Others may cover it up with hairstyles, makeup, hats or scarves. And still others choose one of the treatments available to prevent further hair loss or restore growth.<br><br>
+
+                Before pursuing hair loss treatment, talk with your doctor about the cause of your hair loss and treatment options.
+            </p>
+            <br>
+
+            <p class="subtitle">Symptoms.</p>
+            <p class="content-txt">Hair loss can appear in many different ways, depending on what's causing it. It can come on suddenly or gradually and affect just your scalp or your whole body.<br><br> Signs and symptoms of hair loss may include:</p>
+            <br>
+            <ul class="content-txt">
+                <li>Gradual thinning on top of head</li>
+                <li>Circular or patchy bald spots</li>
+                <li>Sudden loosening of hair</li>
+                <li>Full-body hair loss</li>
+                <li>Patches of scaling that spread over the scalp</li>
+            </ul>
+
+            <p class="subtitle">Prevention.</p>
+            <p class="content-txt">Most baldness is caused by genetics (male-pattern baldness and female-pattern baldness). This type of hair loss is not preventable.
+            <br><br>
+            These tips may help you avoid preventable types of hair loss:
+            </p>
+            <br>
+            <ul class="content-txt">
+                <li>Be gentle with your hair. Use a detangler and avoid tugging when brushing and combing, especially when your hair is wet. A wide-toothed comb might help prevent pulling out hair. Avoid harsh treatments such as hot rollers, curling irons, hot-oil treatments and permanents. Limit the tension on hair from styles that use rubber bands, barrettes and braids.</li>
+                <li>Ask your doctor about medications and supplements you take that might cause hair loss.</li>
+                <li>Protect your hair from sunlight and other sources of ultraviolet light.</li>
+                <li>Stop smoking. Some studies show an association between smoking and baldness in men.</li>
+                <li>If you're being treated with chemotherapy, ask your doctor about a cooling cap. This cap can reduce your risk of losing hair during chemotherapy.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='alopecia1.jpg') }}" alt="alopecia">
+            
+            <img src="{{ url_for('static', filename='alopecia2.jpg') }}" alt="alopecia">  
+
+            <img src="{{ url_for('static', filename='alopecia3.jpg') }}" alt="alopecia">
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>

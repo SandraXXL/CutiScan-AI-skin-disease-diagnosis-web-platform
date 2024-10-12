@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiscan: Cutaneous Larva Migrans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Optima, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: arial;
+            background-color: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        footer {
+            display: table;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-align: left;
+        }
+
+        h1:hover span {
+            display: none;
+        }
+
+        h1:hover:before {
+            content: "AI SKIN DISEASE RECOGNITION.";
+            font-size: 15px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: 800;
+            margin-left: 25px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: pink;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .content {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .txt {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .disease-title {
+            color: pink;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content-txt {
+            font-size: 20px;
+        }
+
+        ul.content-txt {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.content-txt li {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Cutiscan.</span></h1>
+        <nav class="navigation">
+            <a href="/">Home.</a>
+            <a href="/about">About.</a>
+            <a href="#">Contact.</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- display text info-->
+        <div class="txt">
+            <p class="disease-title">Cutaneous Larva Migrans.</p>
+
+            <p class="content-txt">rarity: <strong>common (in tropical areas)</strong> &ensp; prevalence: <strong>unknown</strong></p>
+
+            <br>
+            <p class="subtitle">Overview.</p>
+            <p class="content-txt">
+                Cutaneous larva migrans is caused by a species of hookworm called Ancylostoma. Hookworms are parasites. Parasites are organisms that live on or inside another organism (the host) and depend on the host for nutrition to live. This species of hookworm is a parasite because for one part of its life it normally lives in the intestines of dogs and cats and for another part of its life it lives in human skin. The eggs of the hookworm are excreted in dog and cat feces and develop into larvae when left in warm, moist soil or sand. The larvae mature into a form that can penetrate skin when a person walks barefoot or sunbathes on contaminated soil or sand.
+                <br><br>
+
+                Cutaneous larva migrans occurs worldwide but is most common in tropical environments. The emergence of this condition in previously unaffected areas of the world is thought to be due to climate change.
+                <br><br>
+
+                Starting from the point of entry—usually the feet, legs, buttocks, or back—the hookworm burrows along a haphazard tract, leaving a winding, threadlike, raised, reddish brown rash. The rash itches intensely. Small bumps and blisters may also occur. Often, scratching of the bumps or blisters results in a bacterial infection of the skin.
+
+            </p>
+            <br>
+
+            <p class="subtitle">Diagnosis of Cutaneous Larva Migrans.</p>
+            <br>
+            <p class="content-txt">
+                <strong>A doctor's evaluation:</strong>
+            </p>
+            <br>
+            <p class="content-txt">
+                Doctors base the diagnosis of cutaneous larva migrans on the appearance and location of the rash and on the person's history of recent contact with soil or sand.
+            </p>
+            <br>
+
+            <p class="subtitle">Treatment Suggestions.</p>
+            <ul class="content-txt">
+                <li>Thiabendazole liquid or cream or albendazole ointment</li>
+                <li>Albendazole or ivermectin</li>
+            </ul>
+            <br>
+             <p class="content-txt">
+                The infection goes away by itself after a few weeks to months, but treatment relieves the itching and reduces the risk of bacterial infection that sometimes results from scratching. Thiabendazole liquid or cream or albendazole ointment applied to the affected area effectively treats the infection.
+                <br>
+                Doctors sometimes also give albendazole or ivermectin by mouth to kill the hookworms and cure the infection.
+            </p>
+
+        </div>
+
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='clm1.jpg') }}" >
+            
+            <img src="{{ url_for('static', filename='clm2.jpg') }}" >  
+
+            <img src="{{ url_for('static', filename='clm3.jpg') }}" >
+
+        </div>
+
+        
+        
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Cutiscan</p>
+    </footer>
+</body>
+</html>
