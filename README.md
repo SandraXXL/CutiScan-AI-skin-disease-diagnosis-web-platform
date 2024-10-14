@@ -14,7 +14,7 @@ This project ultilizes InceptionV3 model trained on a dataset that conbines reso
 
 ### Accuracy (Validation): 92%
 
-The dataset consists of 12 classes and 8000 images in total. Dataset splits into 80% for training and 20% for testing.
+The dataset consists of 12 classes and 8000 images in total, splits into 80% for training and 20% for testing.
 
 ### Skin diseases included are:
 
