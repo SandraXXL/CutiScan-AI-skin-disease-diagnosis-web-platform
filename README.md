@@ -89,7 +89,7 @@ in cmd/terminal, make sure you locate inside the "CutiScan" directory.
 
 ### Step 2:
 
-run command: app.py
+run command: python app.py or python3 app.py
 
 use the generated link to access CutiScan web platform.
 
