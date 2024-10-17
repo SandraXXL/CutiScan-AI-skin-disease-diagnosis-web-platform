@@ -15,16 +15,14 @@
 https://youtu.be/kVCwetoE7ek
 
 ## Introduction:
+This is my final-year project, utilizing the InceptionV3 model trained on a dataset that merges resources from DermNet and https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset. The dataset consists of 12 classes and 8000 images in total, splits into 80% for training and 20% for testing. The name "CutiScan" is derived from the Latin word "cutis," meaning "skin."
 
-"Cuti" in "CutiScan" originates from the latin word "cutis" which stands for "skin".
-
-This project ultilizes InceptionV3 model trained on a dataset that conbines resources from "DermNet" and https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset. ** CONTACT ME FOR THE DATASET USED IN THIS PROJECT. **
-
-### Accuracy (Training): 93%
-
-### Accuracy (Validation): 92%
-
-The dataset consists of 12 classes and 8000 images in total, splits into 80% for training and 20% for testing.
+The main functions are:  
+1. Upload skin photo  
+2. Crop photo  
+3. Display possible results  
+4. Classify 12 different skin diseases  
+5. Provide detailed information on each skin disease
 
 ### Skin diseases included are:
 
@@ -61,7 +59,7 @@ vitiligo
 
 
 ## *** Notes ***
-### !!!!!Note that this repository does not contain "my_model.keras" model since it exceeds the maximum uploading limit, please contact me for the model if you need it. Also this project requires you to create a database "cutiscan" to store information regarding each disease. You can create such a database with "PHPMyAdmin", only one table with the name "disease" is needed in this project, here is the database structure:
+This project requires you to create a database "cutiscan" to store information regarding each disease. You can create such a database with "PHPMyAdmin", only one table with the name "disease" is needed in this project, here is the database structure:
 
 
 Figure 1: table structure
@@ -78,13 +76,17 @@ Figure 2: example of table contents
 
 ## Folder Structure
 
-templates: all web pages are under this folder
+### templates: 
+all web pages are under this folder
 
-static & example: images for displaying on the web
+### static & example: 
+images for displaying on the web
 
-uploads: your uploaded skin images will be stored in here
+### uploads: 
+your uploaded skin images will be stored in here
 
-app.py: main backend component
+### app.py: 
+main backend component
 
 
 
