@@ -68,9 +68,9 @@ Figure 2: example of table contents
 
 ## Folder Structure
 
-templates: all web files are under this folder
+templates: all web pages are under this folder
 
-static & example: images for displaying on web pages
+static & example: images for displaying on the web
 
 uploads: your uploaded skin images will be stored in here
 
