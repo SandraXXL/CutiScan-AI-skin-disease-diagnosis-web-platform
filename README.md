@@ -1,4 +1,14 @@
-# CutiScan-AI-skin-disease-diagnosis-web-platform
+# CutiScan: AI skin disease diagnosis web platform
+
+<p align="center">
+  <strong>Accuracy: 0.9127</strong><br>
+  <strong>Precision: 0.9168</strong><br>
+  <strong>Recall: 0.9127</strong><br>
+  <strong>F1-score: 0.9121</strong><br>
+  <br>
+
+  👋 Hi! Please contact me if you need the dataset and model file used in this project, as I cannot upload them due to file size limits.
+</p>
 
 ## Video Demo:
 
