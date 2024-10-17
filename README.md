@@ -39,7 +39,7 @@ shingles,
 urticaria, 
 vitiligo.
 
-### Web pages:
+### Preview of main web pages:
 
 <img width="1099" alt="index" src="https://github.com/user-attachments/assets/4cbff99c-d1a9-49e6-a381-063a94b20f3e">
 
