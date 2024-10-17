@@ -26,29 +26,20 @@ The main functions are:
 
 ### Skin diseases included are:
 
-acne
+acne, 
+alopecia, 
+athlete_foot, 
+cellulitis, 
+chickenpox, 
+cutaneous_larva_migrans, 
+impetigo, 
+nail_fungus, 
+ringworm, 
+shingles, 
+urticaria, 
+vitiligo.
 
-alopecia
-
-athlete_foot
-
-cellulitis
-
-chickenpox
-
-cutaneous_larva_migrans
-
-impetigo
-
-nail_fungus
-
-ringworm
-
-shingles
-
-urticaria
-
-vitiligo
+### Web pages:
 
 <img width="1099" alt="index" src="https://github.com/user-attachments/assets/4cbff99c-d1a9-49e6-a381-063a94b20f3e">
 
@@ -58,7 +49,7 @@ vitiligo
 
 
 
-## *** Notes ***
+## Notes:
 This project requires you to create a database "cutiscan" to store information regarding each disease. You can create such a database with "PHPMyAdmin", only one table with the name "disease" is needed in this project, here is the database structure:
 
 
@@ -74,7 +65,7 @@ Figure 2: example of table contents
 
 
 
-## Folder Structure
+## Folder Structure:
 
 ### templates: 
 all web pages are under this folder
@@ -90,7 +81,7 @@ main backend component
 
 
 
-## How do you run this project (without hosting)
+## How do you run this project (without hosting):
 ### Prerequisites:
 
 make sure you start your "MySQL Database", "ProFTPD", "Apache Web Server" with Xammp.
