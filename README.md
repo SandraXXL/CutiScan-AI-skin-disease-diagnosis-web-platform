@@ -17,7 +17,7 @@ https://youtu.be/kVCwetoE7ek
 ## Introduction:
 This is my final-year project, utilizing the InceptionV3 model trained on a dataset that merges resources from DermNet and https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset. The dataset consists of 12 classes and 8000 images in total, splits into 80% for training and 20% for testing. The name "CutiScan" is derived from the Latin word "cutis," meaning "skin."
 
-The main functions are:  
+### The main functions are:  
 1. Upload skin photo  
 2. Crop photo  
 3. Display possible results  
