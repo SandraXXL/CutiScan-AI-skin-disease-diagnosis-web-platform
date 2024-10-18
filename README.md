@@ -7,7 +7,7 @@
   <strong>F1-score: 0.9121</strong><br>
   <br>
 
-  👋 Hi! Please contact me if you need the dataset and model file used in this project, as I cannot upload them due to file size limits.
+  👋 Hi! Please contact me if you need the dataset and model used in this project, as I cannot upload them due to file size limits.
 </p>
 
 ## Video Demo:
