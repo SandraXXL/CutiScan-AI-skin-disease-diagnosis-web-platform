@@ -94,7 +94,7 @@ in cmd/terminal, make sure you locate inside the "CutiScan" directory.
 
 run command: python app.py or python3 app.py
 
-use the generated link to access CutiScan web platform, it should be http://127.0.0.1:5000
+use the generated URL to access CutiScan web platform, it should be your localhost http://127.0.0.1:5000
 
 
 
